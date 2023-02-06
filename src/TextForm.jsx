@@ -40,7 +40,7 @@ return(
 
       </div>
       <div className="container">
-        <p>{text.length>0 ? text.split(' ').length: 0} words and {text.length} Characters</p>
+        <p>{text.split(' ').filter((elem)=>{return elem.length!=0}).length} words and {text.length} Characters</p>
       </div>
 
       <div className="container">
