@@ -9,27 +9,15 @@ export default function About(props) {
       <h1 style={{marginTop: '2rem'}}>About Us</h1>
     <Accordion className='my-3'>
       <Accordion.Item eventKey="0" >
-        <Accordion.Header >What is Text Utils?</Accordion.Header>
+        <Accordion.Header >Analyze your text</Accordion.Header>
         <Accordion.Body style={{backgroundColor: props.mode==='light'? 'white': 'rgb(41, 49, 58)', color: props.mode==='light'? 'black': 'rgba(255, 255, 255, 0.7)'}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        TextUtils gives you a way to analyze your text quickly & efficiently and lets you convert it to uppercase or lowercase.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1" >
-        <Accordion.Header>How to use it?</Accordion.Header>
+        <Accordion.Header>Free to use</Accordion.Header>
         <Accordion.Body style={{backgroundColor: props.mode==='light'? 'white': 'rgb(41, 49, 58)', color: props.mode==='light'? 'black': 'rgba(255, 255, 255, 0.7)'}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+         TextUtils is a free character counter that provides instant character count & word count stats for a specific text. It reports the number of words and characters. Thus it is suitable for writing text with word/character limit.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
