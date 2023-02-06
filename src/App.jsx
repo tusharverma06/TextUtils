@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import About from './About';
 import Navbar from './navbar';
-import DarkMode from './darkmode.png'
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -53,19 +52,11 @@ return (
  <AlertMessage alert={alert}/>
 
 </div>    
-<div className="modeSwitch">
-<div className="form-check form-switch mx-3">
-  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={toggleMode}/>
-  {mode==='light'?   <img src="https://cdn2.iconfinder.com/data/icons/user-interface-vol-2-14/48/brightness-light-up-day-mode-512.png" alt="" width={'20px'} />
-:<img src={DarkMode} alt='' />
-}
-
-</div>
-</div>
+ 
         <Routes>
 
          <Route exact path='/about' element={<About mode={mode}/>} />
-              <Route exact path="/" element={<TextForm mode={mode}  showAlert={showAlert}/>
+              <Route exact path="/" element={<TextForm mode={mode}  showAlert={showAlert} toggleMode={toggleMode}/>
 }/>
         </Routes>
       
