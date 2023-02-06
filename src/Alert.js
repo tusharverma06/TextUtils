@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
 
 function AlertMessage(props) {
-  const [show, setShow] = useState(true);
 
-  if (show) {
     return (
-        props.alert &&
-      <Alert variant="success" onClose={() => setShow(false)} >
+      <div style={{height: '10px'}}>
+       { props.alert &&
+      <Alert variant="success">
        
       <span>{props.alert.message}</span>
     
-      </Alert>
+      </Alert>}
+      </div>
     );
-  }
+  
 }
 
 export default AlertMessage
