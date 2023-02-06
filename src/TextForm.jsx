@@ -6,20 +6,34 @@ export default function TextForm(props){
     const [text, setText] = useState('');
 
     const handleClick = () =>{
-      setText(text.toUpperCase())
-      props.showAlert("✅Converted to uppercase")
+      if(text.length>0){
+
+        setText(text.toUpperCase())
+        props.showAlert("✅Converted to uppercase", 'success')
+      }else{
+        props.showAlert('❌ TextBox is Empty', 'danger')
+      }
 
     }
     const handleOnchange = (event) =>{
       setText(event.target.value)
     }
     const handlelowClick = () =>{
-      setText(text.toLowerCase())
-      props.showAlert("✅Converted to lowercase")
+      if(text.length>0){
+
+        setText(text.toLowerCase())
+        props.showAlert("✅Converted to lowercase",'success')
+      }else{
+        props.showAlert('❌ TextBox is Empty', 'danger')
+      }
     }
     const handleCopyClick = () =>{
-    navigator.clipboard.writeText(text).then( props.showAlert("✅Copied to clipboard", 'Success'));
-     document.getElementById('input').select()
+      if(text.length>0){
+        navigator.clipboard.writeText(text).then( props.showAlert("✅Copied to clipboard", 'success'));
+        document.getElementById('input').select()
+      }else{
+        props.showAlert('❌ TextBox is Empty', 'danger')
+      }
     }
     const handleDeleteClick = () =>{
       setText('')
